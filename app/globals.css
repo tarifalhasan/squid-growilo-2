@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primaryColor: '#1E1E1E';
+  --secondaryColor: '#101010';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply bg-black text-white;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.mobile_navbar {
+  transform: translateX(0px) !important;
+  transition: 0.5s all ease !important;
+}
+
+@layer components {
+  .navbar {
+    background: linear-gradient(90.25deg, #000000 0.94%, #1a1a1a 99.03%);
+  }
+  .nav-link {
+    @apply py-10 text-md font-semibold;
+  }
 }
