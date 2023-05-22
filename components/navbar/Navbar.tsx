@@ -3,9 +3,10 @@ import Container from '../Container';
 
 import Logo from '../../assets/images/SRLOGO.svg';
 import Dropdown from '../../assets/images/Dropdown.svg';
-import Button from '../../assets/images/button.svg';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { NavButton } from '../Button';
 
 const Navbar = () => {
   return (
@@ -40,9 +41,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <button>
-              <Image src={Button} alt="buttom" />
-            </button>
+            <NavButton />
           </div>
         </div>
       </Container>
